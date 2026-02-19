@@ -10,14 +10,14 @@ const Navbar = () => {
         {/* nav menu links */}
         <ul className="flex items-center gap-x-10">
           <li>
-            <Link href="#" className="text-base font-semibold text-dark">
+            <Link href="#" className="text-base font-semibold text-secondary">
               New Drops 🔥
             </Link>
           </li>
           <li>
             <Link
               href="#"
-              className="text-base font-semibold text-dark flex items-center gap-0.5"
+              className="text-base font-semibold text-secondary flex items-center gap-0.5"
             >
               Men <DownArrowIcon />
             </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#"
-              className="text-base font-semibold text-dark flex items-center gap-0.5"
+              className="text-base font-semibold text-secondary flex items-center gap-0.5"
             >
               Women <DownArrowIcon />
             </Link>

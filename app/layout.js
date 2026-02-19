@@ -1,4 +1,6 @@
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import Newsletter from "@/components/shared/Newsletter";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +20,8 @@ export default function RootLayout({ children }) {
       <body className={`${rubik.variable} bg-light-gray antialiased`}>
         <Navbar />
         {children}
+        <Newsletter />
+        <Footer />
       </body>
     </html>
   );
