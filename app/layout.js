@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} antialiased`}>
+      <body className={`${rubik.variable} bg-light-gray antialiased`}>
         <Navbar />
         {children}
       </body>
