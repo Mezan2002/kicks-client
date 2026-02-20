@@ -39,7 +39,7 @@ const Footer = () => {
             <h5 className="text-4xl font-semibold text-yellow mb-1">
               About us
             </h5>
-            <p className="text-light-gray text-xl">
+            <p className="text-light-gray text-xl font-medium font-open-sans">
               We are the biggest hyperstore in the universe. We got you all
               cover with our exclusive collections and latest drops.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-xl text-light-gray"
+                        className="text-xl font-medium font-open-sans text-light-gray"
                       >
                         {link.label}
                       </Link>

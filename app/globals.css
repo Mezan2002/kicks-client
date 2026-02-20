@@ -10,6 +10,7 @@
 
   /* fonts */
   --font-rubik: var(--font-rubik);
+  --font-open-sans: "Open Sans", sans-serif;
 }
 
 body {
