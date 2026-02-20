@@ -6,6 +6,7 @@ export { default as FacebookIcon } from "@/components/ui/customSvg/FacebookIcon"
 export { default as InstagramIcon } from "@/components/ui/customSvg/InstagramIcon";
 export { default as PlusCircleIcon } from "@/components/ui/customSvg/PlusCircleIcon";
 export { default as SearchIcon } from "@/components/ui/customSvg/SearchIcon";
+export { default as StarIcon } from "@/components/ui/customSvg/StarIcon";
 export { default as TiktokIcon } from "@/components/ui/customSvg/TiktokIcon";
 export { default as TwitterIcon } from "@/components/ui/customSvg/TwitterIcon";
 export { default as UserIcon } from "@/components/ui/customSvg/UserIcon";
