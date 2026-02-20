@@ -1,3 +1,6 @@
+export { default as ArrowRightUp } from "@/components/ui/customSvg/ArrowRightUp";
+export { default as ChevronLeftIcon } from "@/components/ui/customSvg/ChevronLeftIcon";
+export { default as ChevronRightIcon } from "@/components/ui/customSvg/ChevronRightIcon";
 export { default as DownArrowIcon } from "@/components/ui/customSvg/DownArrowIcon";
 export { default as FacebookIcon } from "@/components/ui/customSvg/FacebookIcon";
 export { default as InstagramIcon } from "@/components/ui/customSvg/InstagramIcon";

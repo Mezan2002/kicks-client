@@ -3,7 +3,7 @@ import Image from "next/image";
 const HeroBanner = () => {
   return (
     <div className="mb-24">
-      <h1 className="text-[15.9vw] font-extrabold leading-[1.1] uppercase text-secondary tracking-tight my-4">
+      <h1 className="text-[15.9vw] font-extrabold leading-[1.1] uppercase text-secondary tracking-tight my-4 whitespace-nowrap">
         Do it <span className="text-primary">Right</span>
       </h1>
 
