@@ -5,7 +5,7 @@ import Reviews from "@/components/home/Reviews";
 
 const Home = () => {
   return (
-    <div className="mx-[60px]">
+    <div className="mx-4 md:mx-[60px]">
       <HeroBanner />
       <NewDrops />
       <Categories />

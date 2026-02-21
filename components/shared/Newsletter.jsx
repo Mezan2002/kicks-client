@@ -4,39 +4,37 @@ import { PlusCircleIcon } from "@/components/ui/customSvg";
 
 const Newsletter = () => {
   return (
-    <div className="mx-[60px] bg-primary rounded-t-[48px] flex items-center justify-between px-[72px] pt-16 pb-32 overflow-hidden -mb-20">
+    <div className="mx-6 md:mx-[60px] bg-primary rounded-[32px] md:rounded-t-[48px] flex flex-col md:flex-row items-start md:items-center md:justify-between px-4 pt-4 pb-32 md:px-[72px] md:pt-16 md:pb-32 overflow-hidden -mb-40 md:-mb-40">
       {/* left side - text & form */}
-      <div className="max-w-[600px]">
-        <h2
-          className="text-5xl font-semibold
-         text-white uppercase leading-tight mb-3"
-        >
+      <div className="max-w-full md:max-w-[600px] text-left mb-10 md:mb-0">
+        <h2 className="text-[32px] md:text-5xl font-bold text-white uppercase leading-tight mb-2">
           Join our KicksPlus Club & get 15% off
         </h2>
-        <p className="text-light-gray text-xl mb-6 font-open-sans">
+        <p className="text-white/80 text-sm md:text-xl mb-6 font-open-sans">
           Sign up for free! Join the community.
         </p>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 w-full sm:w-auto">
           <input
             type="email"
             placeholder="Email address"
-            className="border border-white placeholder:text-light-gray/75 text-light-gray rounded-lg px-4 py-3 text-base w-[342px] outline-none focus:border-white/50 transition-colors"
+            className="bg-transparent border border-white/40 placeholder:text-white/60 text-white rounded-lg px-4 py-2.5 text-sm flex-1 sm:flex-none sm:w-[280px] md:w-[342px] outline-none focus:border-white transition-colors"
           />
-          <button className="bg-secondary text-white font-medium text-sm uppercase tracking-wider rounded-lg px-6 py-[15px] hover:bg-secondary/90 transition-colors">
+          <button className="bg-secondary text-white font-bold text-xs uppercase tracking-wider rounded-lg px-4 md:px-6 py-3 md:py-[13px] hover:bg-secondary/90 transition-colors shrink-0">
             Submit
           </button>
         </div>
       </div>
 
       {/* right side - KICKS logo */}
-      <div className="select-none relative mr-[7%]">
+      <div className="select-none relative group">
         <Image
           src="/images/shared/logo-white.png"
           alt="Logo white"
           width={351}
           height={88}
+          className="w-[180px] md:w-[351px] h-auto"
         />
-        <div className="absolute -top-6 -right-3">
+        <div className="absolute md:-top-6 -top-5 -right-4 md:-right-3 scale-50 md:scale-100">
           <PlusCircleIcon />
         </div>
       </div>

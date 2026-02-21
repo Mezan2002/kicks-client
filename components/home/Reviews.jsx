@@ -20,17 +20,17 @@ const REVIEWS_DATA = [
 
 const Reviews = () => {
   return (
-    <div className="py-32">
-      <div className="flex items-center justify-between mb-16">
-        <h2 className="text-[74px] font-semibold text-secondary uppercase leading-none">
+    <div className="py-12 md:py-32">
+      <div className="flex items-center justify-between gap-4 mb-8 md:mb-16">
+        <h2 className="text-2xl md:text-[74px] font-bold text-secondary uppercase leading-none">
           REVIEWS
         </h2>
-        <button className="bg-primary text-white text-sm font-medium px-8 py-4 rounded-lg uppercase tracking-widest hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+        <button className="bg-primary text-white text-[10px] md:text-sm font-bold px-6 py-3 md:px-8 md:py-4 rounded-lg uppercase tracking-widest hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/20 whitespace-nowrap">
           See all
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
         {REVIEWS_DATA.map((review) => (
           <ReviewCard
             key={review.id}

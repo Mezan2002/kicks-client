@@ -1,12 +1,17 @@
 export { default as ArrowRightUp } from "@/components/ui/customSvg/ArrowRightUp";
+export { default as BinIcon } from "@/components/ui/customSvg/BinIcon";
+export { default as ChevronDownIcon } from "@/components/ui/customSvg/ChevronDownIcon";
 export { default as ChevronLeftIcon } from "@/components/ui/customSvg/ChevronLeftIcon";
 export { default as ChevronRightIcon } from "@/components/ui/customSvg/ChevronRightIcon";
 export { default as DownArrowIcon } from "@/components/ui/customSvg/DownArrowIcon";
 export { default as FacebookIcon } from "@/components/ui/customSvg/FacebookIcon";
+export { default as HamburgerMenuIcon } from "@/components/ui/customSvg/HamburgerMenuIcon";
+export { default as HeartIcon } from "@/components/ui/customSvg/HeartIcon";
 export { default as InstagramIcon } from "@/components/ui/customSvg/InstagramIcon";
 export { default as PlusCircleIcon } from "@/components/ui/customSvg/PlusCircleIcon";
 export { default as SearchIcon } from "@/components/ui/customSvg/SearchIcon";
 export { default as StarIcon } from "@/components/ui/customSvg/StarIcon";
 export { default as TiktokIcon } from "@/components/ui/customSvg/TiktokIcon";
+export { default as TrashIcon } from "@/components/ui/customSvg/TrashIcon";
 export { default as TwitterIcon } from "@/components/ui/customSvg/TwitterIcon";
 export { default as UserIcon } from "@/components/ui/customSvg/UserIcon";

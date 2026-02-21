@@ -32,30 +32,31 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <div>
-      <div className="mx-[60px] bg-secondary rounded-[48px] overflow-hidden">
-        <div className="p-10 flex 2xl:gap-40 xl:gap-20 lg:gap-10 justify-between mb-24">
-          <div className="xl:max-w-[450px] lg:max-w-[250px]">
-            <h5 className="text-4xl font-semibold text-yellow mb-1">
+    <footer className="mt-20">
+      <div className="mx-6 md:mx-[60px] bg-secondary rounded-[32px] md:rounded-[48px] overflow-hidden">
+        <div className="p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-10">
+          <div className="max-w-full lg:max-w-[300px] xl:max-w-[450px]">
+            <h5 className="text-3xl md:text-4xl font-semibold text-yellow mb-2 md:mb-4">
               About us
             </h5>
-            <p className="text-light-gray text-xl font-medium font-open-sans">
+            <p className="text-light-gray text-base md:text-xl font-medium font-open-sans">
               We are the biggest hyperstore in the universe. We got you all
               cover with our exclusive collections and latest drops.
             </p>
           </div>
-          <div className="grid grid-cols-3 2xl:gap-32 xl:gap-16 lg:gap-8">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 lg:gap-8 xl:gap-16 2xl:gap-32">
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h6 className="text-2xl font-semibold text-yellow mb-4">
+                <h6 className="text-xl md:text-2xl font-semibold text-yellow mb-4 md:mb-6">
                   {section.title}
                 </h6>
-                <ul className="space-y-2">
+                <ul className="space-y-2 md:space-y-3">
                   {section.links.map((link) => (
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-xl font-medium font-open-sans text-light-gray"
+                        className="text-base md:text-xl font-medium font-open-sans text-light-gray hover:text-white transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -64,21 +65,22 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
+
             <div>
-              <h6 className="text-2xl font-semibold text-yellow mb-4">
+              <h6 className="text-xl md:text-2xl font-semibold text-yellow mb-4 md:mb-6">
                 Follow us
               </h6>
               <div className="flex items-center gap-x-6">
-                <button>
+                <button className="hover:scale-110 transition-transform">
                   <FacebookIcon />
                 </button>
-                <button>
+                <button className="hover:scale-110 transition-transform">
                   <InstagramIcon />
                 </button>
-                <button>
+                <button className="hover:scale-110 transition-transform">
                   <TwitterIcon />
                 </button>
-                <button>
+                <button className="hover:scale-110 transition-transform">
                   <TiktokIcon />
                 </button>
               </div>
@@ -86,17 +88,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <Image
-          src="/images/shared/footer-logo.png"
-          alt="Footer logo"
-          width={1300}
-          height={500}
-        />
+        <div className="px-4 md:px-0">
+          <Image
+            src="/images/shared/footer-logo.png"
+            alt="Footer logo"
+            width={1300}
+            height={500}
+            className="w-full h-auto brightness-110"
+          />
+        </div>
       </div>
-      <h6 className="text-center text-sm text-secondary pt-7 pb-[18px]">
+      <h6 className="text-center text-xs md:text-sm text-secondary pt-6 pb-4 md:pt-7 md:pb-[18px] opacity-70">
         © All rights reserved
       </h6>
-    </div>
+    </footer>
   );
 };
 

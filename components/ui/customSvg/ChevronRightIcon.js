@@ -1,4 +1,4 @@
-const ChevronRightIcon = () => {
+const ChevronRightIcon = ({ strokeColor = "#232321" }) => {
   return (
     <svg
       width="16"
@@ -9,7 +9,7 @@ const ChevronRightIcon = () => {
     >
       <path
         d="M6 3.5L10.5 8L6 12.5"
-        stroke="#232321"
+        stroke={strokeColor}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

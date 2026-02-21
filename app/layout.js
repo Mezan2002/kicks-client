@@ -19,16 +19,20 @@ export const metadata = {
   description: "Kicks a new era of shoes",
 };
 
+import { CartProvider } from "@/context/CartContext";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${rubik.variable} ${openSans.variable} bg-light-gray antialiased`}
       >
-        <Navbar />
-        {children}
-        <Newsletter />
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          {children}
+          <Newsletter />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
