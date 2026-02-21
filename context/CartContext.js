@@ -3,11 +3,21 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
+/**
+ * CartContext provides a centralized state management system for the shopping bag.
+ * It handles adding, removing, updates to quantities and sizes, and persistence via localStorage.
+ */
 const CartContext = createContext();
 
+/**
+ * CartProvider wraps the application to provide global cart state.
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - Child components.
+ */
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  // Hydrate cart from localStorage on mount
   useEffect(() => {
     const savedCart = localStorage.getItem("kicks_cart");
     if (savedCart) {
@@ -19,7 +29,7 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
-  // Persist cart to localStorage on change
+  // Sync cart to localStorage on every change
   useEffect(() => {
     localStorage.setItem("kicks_cart", JSON.stringify(cart));
   }, [cart]);
