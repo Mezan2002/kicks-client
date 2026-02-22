@@ -1,8 +1,9 @@
-const BinIcon = () => {
+const BinIcon = ({ width = "32", height = "32", className }) => {
   return (
     <svg
-      width="32"
-      height="32"
+      width={width}
+      height={height}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

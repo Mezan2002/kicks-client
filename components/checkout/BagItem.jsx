@@ -23,12 +23,12 @@ const BagDropdown = ({ label, value, options, onSelect }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-secondary/70 text-sm md:text-xl font-semibold font-open-sans hover:text-secondary transition-colors"
+        className="flex items-center gap-2 text-secondary/70 text-xs md:text-xl font-semibold font-open-sans hover:text-secondary transition-colors"
       >
-        {label} {value}{" "}
-        <ChevronDownIcon
-          className={`size-5 md:size-6 transition-transform ${isOpen ? "rotate-180" : ""}`}
-        />
+        {label} {value}
+        <div className="hidden lg:block">
+          <ChevronDownIcon />
+        </div>
       </button>
 
       {isOpen && (
@@ -63,7 +63,7 @@ const BagItem = ({ item }) => {
 
   return (
     <div className="flex gap-4 md:gap-6 border-b border-gray-100 last:border-none py-6 first:pt-0">
-      <div className="relative w-[150px] h-[150px] md:w-[207px] md:h-[225px] shrink-0 rounded-3xl overflow-hidden bg-[#F6F6F6]">
+      <div className="relative w-[150px] h-[220px] md:w-[207px] md:h-[225px] shrink-0 rounded-3xl overflow-hidden bg-[#F6F6F6]">
         <Image
           src={item?.images?.[0] || "/placeholder.png"}
           alt={item?.title}
@@ -72,7 +72,7 @@ const BagItem = ({ item }) => {
         />
       </div>
 
-      <div className="flex-1 flex flex-col md:flex-row justify-between gap-4">
+      <div className="flex-1 flex flex-col md:flex-row justify-between gap-2 md:gap-4">
         <div className="flex flex-col gap-1 md:gap-2">
           <h3 className="text-base md:text-2xl font-semibold text-secondary uppercase leading-tight">
             {item?.title}
@@ -81,10 +81,10 @@ const BagItem = ({ item }) => {
             {item?.category?.name}
           </p>
           <p className="text-secondary/80 md:text-xl font-semibold font-open-sans">
-            Color - {item?.selectedColor || "Default"}
+            {item?.selectedColor || "Default"}
           </p>
 
-          <div className="flex flex-wrap items-center gap-6 md:gap-10 md:mt-3">
+          <div className="flex items-center gap-4 md:gap-10 md:mt-3">
             <BagDropdown
               label="Size"
               value={item?.selectedSize}
@@ -113,9 +113,13 @@ const BagItem = ({ item }) => {
             />
           </div>
 
-          <div className="flex items-center gap-6 mt-6 md:mt-8">
+          <div className="flex items-center gap-6 mt-2 md:mt-8">
             <button className="hover:text-primary transition-colors text-secondary/70">
-              <HeartIcon size={32} strokeColor="currentColor" strokeWidth={1} />
+              <HeartIcon
+                className="size-6 md:size-8"
+                strokeColor="currentColor"
+                strokeWidth={1}
+              />
             </button>
             <button
               onClick={() =>
@@ -123,12 +127,12 @@ const BagItem = ({ item }) => {
               }
               className="hover:text-red-500 transition-colors text-secondary/70"
             >
-              <BinIcon />
+              <BinIcon className="size-6 md:size-8" />
             </button>
           </div>
         </div>
 
-        <p className="text-primary text-xl md:text-2xl font-semibold whitespace-nowrap">
+        <p className="text-primary text-lg md:text-2xl font-semibold whitespace-nowrap">
           ${item?.price?.toFixed(2)}
         </p>
       </div>

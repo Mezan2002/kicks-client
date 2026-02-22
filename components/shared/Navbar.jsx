@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-8 z-50">
-      <nav className="mx-4 md:mx-[60px] mt-8 bg-light-white py-2 px-3 md:p-8 rounded-xl md:rounded-3xl">
+      <nav className="mx-4 md:mx-[60px] mt-8 bg-light-white py-2 px-3 md:p-8 rounded-xl md:rounded-3xl backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <button
