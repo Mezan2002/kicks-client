@@ -1,7 +1,7 @@
 const HeartIcon = ({
-  size,
+  size = 16,
   className,
-  strokeColor = "white",
+  strokeColor = "#ffffff",
   strokeWidth = 1.5,
 }) => {
   return (

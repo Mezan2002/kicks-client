@@ -47,7 +47,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="bg-secondary px-4 md:px-[60px] pt-12 md:pt-24 -mx-4 md:-mx-[60px]">
+    <div className="bg-secondary px-4 md:px-[60px] pt-12 md:pt-24 -mx-4 md:-mx-[60px] overflow-hidden">
       <div className="flex items-center justify-between pb-8 md:pb-16 px-4 md:px-0">
         <h2 className="text-2xl md:text-[74px] font-bold text-white uppercase leading-none">
           Categories
