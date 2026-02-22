@@ -4,7 +4,7 @@ import { PlusCircleIcon } from "@/components/ui/customSvg";
 
 const Newsletter = () => {
   return (
-    <div className="mx-6 md:mx-[60px] bg-primary rounded-[32px] md:rounded-t-[48px] flex flex-col md:flex-row items-start md:items-center md:justify-between px-4 pt-4 pb-32 md:px-[72px] md:pt-16 md:pb-32 overflow-hidden -mb-40 md:-mb-40">
+    <div className="mx-4 md:mx-[60px] bg-primary rounded-[32px] md:rounded-t-[48px] flex flex-col md:flex-row items-start md:items-center md:justify-between px-4 pt-4 pb-32 md:px-[72px] md:pt-16 md:pb-32 overflow-hidden -mb-40 md:-mb-40">
       {/* left side - text & form */}
       <div className="max-w-full md:max-w-[600px] text-left mb-10 md:mb-0">
         <h2 className="text-[32px] md:text-5xl font-bold text-white uppercase leading-tight mb-2">

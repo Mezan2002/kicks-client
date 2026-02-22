@@ -85,7 +85,7 @@ const Categories = () => {
       <div
         ref={scrollRef}
         onScroll={updateProgress}
-        className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth -mr-20 rounded-tl-[48px] md:rounded-tl-[64px]"
+        className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth md:-mr-20 rounded-tl-[48px] md:rounded-tl-[64px]"
       >
         {loading || !categories ? (
           <div className="min-w-full min-h-[400px] md:min-h-[550px] bg-[#ECEEF0] rounded-tl-[48px] md:rounded-tl-[64px] flex items-center justify-center">

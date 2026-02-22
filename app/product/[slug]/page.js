@@ -48,16 +48,18 @@ const ProductDetailPage = () => {
   }
 
   return (
-    <main className="px-4 md:px-[60px] py-4 md:py-8">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
-        <ProductGallery images={product?.images} />
-        <ProductInfo product={product} />
-      </div>
+    <main className="min-h-screen">
+      <div className="px-4 md:px-[60px] py-4 md:py-8 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-11">
+          <ProductGallery images={product?.images} />
+          <ProductInfo product={product} />
+        </div>
 
-      <RelatedProducts
-        categoryId={product?.category?.id}
-        currentProductId={product?.id}
-      />
+        <RelatedProducts
+          categoryId={product?.category?.id}
+          currentProductId={product?.id}
+        />
+      </div>
     </main>
   );
 };

@@ -33,8 +33,8 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer className="mt-20">
-      <div className="mx-6 md:mx-[60px] bg-secondary rounded-[32px] md:rounded-[48px] overflow-hidden">
-        <div className="p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-10">
+      <div className="mx-4 md:mx-[60px] bg-secondary rounded-[32px] md:rounded-[48px] overflow-hidden">
+        <div className="p-4 md:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-10">
           <div className="max-w-full lg:max-w-[300px] xl:max-w-[450px]">
             <h5 className="text-3xl md:text-4xl font-semibold text-yellow mb-2 md:mb-4">
               About us

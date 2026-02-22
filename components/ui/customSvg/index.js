@@ -15,3 +15,4 @@ export { default as TiktokIcon } from "@/components/ui/customSvg/TiktokIcon";
 export { default as TrashIcon } from "@/components/ui/customSvg/TrashIcon";
 export { default as TwitterIcon } from "@/components/ui/customSvg/TwitterIcon";
 export { default as UserIcon } from "@/components/ui/customSvg/UserIcon";
+export { default as XIcon } from "@/components/ui/customSvg/XIcon";

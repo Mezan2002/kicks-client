@@ -23,16 +23,16 @@ const RelatedProducts = ({ categoryId, currentProductId }) => {
 
   useEffect(() => {
     const updateItemsPerView = () => {
-      if (window.innerWidth < 640) setItemsPerView(1);
-      else if (window.innerWidth < 768) setItemsPerView(2);
-      else setItemsPerView(4);
+      // Always show 4 items per "page" logic for calculation
+      // Mobile: 2x2 grid, Desktop: 1x4 horizontal
+      setItemsPerView(4);
     };
     updateItemsPerView();
     window.addEventListener("resize", updateItemsPerView);
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
-  const totalSteps = Math.ceil(relatedProducts.length / itemsPerView);
+  const totalSteps = Math.ceil(relatedProducts.length / 4);
   const activeIndex = Math.round((scrollProgress / 100) * (totalSteps - 1));
 
   const handleScroll = (direction) => {
@@ -90,13 +90,10 @@ const RelatedProducts = ({ categoryId, currentProductId }) => {
       <div
         ref={scrollRef}
         onScroll={updateProgress}
-        className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory"
+        className="grid grid-flow-col grid-rows-2 md:grid-rows-1 gap-4 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory auto-cols-[calc(50%-8px)] md:auto-cols-[calc(25%-12px)] px-0"
       >
         {relatedProducts.map((product) => (
-          <div
-            key={product.id}
-            className="min-w-[calc(100%-16px)] sm:min-w-[calc(50%-12px)] md:min-w-[calc(25%-12px)] snap-start"
-          >
+          <div key={product.id} className="snap-start w-full">
             <ProductCard product={product} />
           </div>
         ))}
